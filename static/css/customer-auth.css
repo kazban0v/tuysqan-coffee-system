@@ -1,0 +1,26 @@
+body[data-page="client-phone"]{background:#f7f2e9;color:#302a24}
+body[data-page="client-phone"] .shell{max-width:1140px;margin:0 auto;padding:32px 32px 48px;min-height:0}
+.auth-header{max-width:1204px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:28px 32px;gap:24px}
+.auth-logo{display:block;width:174px;flex:none}.auth-logo img{width:100%;height:auto}
+.auth-header .language-switch{margin:0;border-color:#dbd2c5;background:transparent}.auth-header .language-switch button{min-width:40px;min-height:38px}
+.auth-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,8vw,112px);align-items:center}
+.auth-brand-panel{min-height:610px;align-self:stretch;background:#303d32;color:#f0e5d0;border-radius:20px;padding:36px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}
+.auth-brand-panel:after{content:'';position:absolute;width:300px;height:300px;border:1px solid #f0e5d025;border-radius:50%;right:-160px;top:110px;box-shadow:0 0 0 30px #f0e5d008,0 0 0 60px #f0e5d006}
+.auth-brand-kicker{font-size:10px;letter-spacing:.2em}.auth-brand-center{display:flex;flex-direction:column;align-items:start;font-size:clamp(42px,5.5vw,66px);font-weight:500;line-height:.98;letter-spacing:-.065em}.auth-brand-center span:last-child{color:#c6af8d}
+.auth-brand-bottom{display:flex;justify-content:space-between;gap:16px;font-size:9px;letter-spacing:.14em}
+.auth-content{width:100%;max-width:410px;padding:12px 0}
+.auth-back{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:13px;text-decoration:none;color:#6f6458;margin-bottom:40px}.auth-back>span:first-child{font-size:21px}
+.auth-kicker{display:flex;align-items:center;gap:9px;color:#985139;font-size:10px;font-weight:700;letter-spacing:.14em;margin-bottom:18px}.auth-kicker>span:first-child{width:6px;height:6px;border-radius:50%;background:currentColor}
+.auth-heading h1{font-family:inherit;font-size:34px;line-height:1.12;font-weight:650;letter-spacing:-.045em;margin:0 0 14px}
+.auth-description{color:#766a5d;font-size:14px;line-height:1.6;max-width:335px}
+.auth-form{display:grid;gap:24px;margin-top:32px}.auth-field{display:grid;gap:10px;font-size:13px;font-weight:550}.auth-field[hidden]{display:none!important}
+.auth-field input{width:100%;min-width:0;height:60px;border:1px solid #d9cebd;border-radius:12px;background:#fffcf7;padding:16px;font-size:18px;line-height:1.4;font-variant-numeric:tabular-nums;color:#302a24;transition:border-color .16s,box-shadow .16s}
+.auth-field input::placeholder{color:#958b7f}.auth-field input:focus{outline:none;border-color:#8d4a32;box-shadow:0 0 0 3px #a44d3212}
+.auth-consent{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;font-size:12px;line-height:1.6;color:#766a5d;cursor:pointer}.auth-consent input{width:20px;height:20px;margin:0;accent-color:#a44d32}
+.auth-form .form-error{margin:0;font-size:13px}.auth-form .form-error:empty{display:none}
+.auth-submit{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:56px;border:0;border-radius:12px;padding:16px 20px;background:#a44d32;color:#fffaf2;font-size:14px;font-weight:650;line-height:1.4;transition:background .16s}
+.auth-submit:hover{background:#883e28}.auth-submit>span:last-child{font-size:23px;font-weight:400;line-height:1}
+.auth-signature{display:flex;align-items:center;gap:14px;color:#968775;font-size:12px;margin-top:44px;letter-spacing:-.025em}.auth-signature>span:first-child,.auth-signature>span:last-child{flex:1;height:1px;background:#e2d8ca}
+@media(max-width:760px){body[data-page="client-phone"] .shell{padding:0 24px 32px}.auth-header{padding:24px;gap:20px}.auth-logo{width:150px}.auth-layout{display:block;max-width:420px;margin:auto}.auth-brand-panel{display:none}.auth-content{max-width:none;padding:4px 0 0}.auth-back{margin-bottom:34px}.auth-heading h1{font-size:32px}.auth-form{margin-top:30px}.auth-signature{margin-top:48px}}
+@media(max-width:360px){.auth-header{padding:20px}.auth-logo{width:136px}body[data-page="client-phone"] .shell{padding-inline:20px}.auth-heading h1{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.auth-field input,.auth-submit{transition:none}}

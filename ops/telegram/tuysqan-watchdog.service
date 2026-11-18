@@ -1,0 +1,30 @@
+[Unit]
+Description=Tuysqan availability watchdog
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tuysqan-monitor
+Group=tuysqan-monitor
+WorkingDirectory=/opt/tuysqan-monitor
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/usr/bin/python3 /opt/tuysqan-monitor/scripts/watch_monitor.py --config /etc/tuysqan-monitor/config.json
+Restart=on-failure
+RestartSec=5
+StateDirectory=tuysqan-monitor
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/tuysqan-monitor
+
+[Install]
+WantedBy=multi-user.target

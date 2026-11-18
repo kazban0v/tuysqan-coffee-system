@@ -1,0 +1,21 @@
+'use strict';
+// Exercise the actual guest renderer: station deadlines must never collapse into one ETA.
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync('static/js/app.js','utf8');
+const start=source.indexOf('function guestStationTimes('),end=source.indexOf('let guestOrdersFilter=',start);
+assert(start>=0&&end>start,'Guest station renderer is present');
+const context={lang:'ru',Date,tr:(ru,kz)=>context.lang==='kz'?kz:ru,esc:value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))};
+vm.createContext(context);vm.runInContext(source.slice(start,end),context);
+const render=order=>context.guestStationTimes(order);
+const food={kind:'food',status:'preparing'},drink={kind:'drink',status:'preparing'};
+const mixed={status:'preparing',items:[food,drink],food_eta_at:'2026-11-08T12:20:00+05:00',food_eta_minutes:20,drink_eta_at:'2026-11-08T12:05:00+05:00',drink_eta_minutes:5};
+const html=render(mixed);
+assert.match(html,/>Блюда</);assert.match(html,/>Напитки</);assert.match(html,/20 мин/);assert.match(html,/5 мин/);assert.equal((html.match(/class="guest-station-time"/g)||[]).length,2,'Mixed order renders two independent stations');
+const foodOnly=render({...mixed,items:[food]});assert.match(foodOnly,/>Блюда</);assert(!foodOnly.includes('Напитки'));assert(!foodOnly.includes('5 мин'),'A dish-only order does not show bar ETA');
+const drinkOnly=render({...mixed,items:[drink]});assert.match(drinkOnly,/>Напитки</);assert(!drinkOnly.includes('Блюда'));assert(!drinkOnly.includes('20 мин'),'A drink-only order does not show kitchen ETA');
+const pending=render({status:'accepted',items:[food,drink],eta_at:mixed.food_eta_at});assert.match(pending,/Кухня уточняет время/);assert.match(pending,/Бар уточняет время/);assert(!pending.includes('Шамамен'),'Legacy combined ETA is not falsely attributed to either station');
+const foodReady=render({...mixed,items:[{...food,status:'ready'},drink]});assert.match(foodReady,/guest-station-time is-ready"><span>Блюда<\/span><strong>Готовы/);assert(!foodReady.includes('20 мин'),'Ready food no longer promises an obsolete deadline');assert.match(foodReady,/5 мин/);
+const partial=render({...mixed,items:[{...food,status:'ready'},food,drink]});assert(!partial.includes('is-ready'),'One ready food item does not mark the entire kitchen ready');
+for(const status of ['new','ready','served','cancelled','rejected'])assert.equal(render({...mixed,status}),'','Station ETA is hidden outside accepted/preparing');
+context.lang='kz';const kazakh=render(mixed);assert.match(kazakh,/>Тағамдар</);assert.match(kazakh,/>Сусындар</);assert.match(kazakh,/Шамамен/);
+console.log('Guest station times: mixed/food-only/drink-only, missing estimates, station readiness, terminal states and RU/KZ PASS');

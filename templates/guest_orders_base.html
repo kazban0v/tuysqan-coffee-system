@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% load static %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/guest-orders.css' %}?v=station-times-5">{% endblock %}
+{% block page_header %}<header class="orders-header"><a class="orders-logo" href="/" aria-label="Tuysqan Coffee"><img src="/static/branding/tuysqan-logo.png" alt="Tuysqan Coffee" width="2172" height="724"></a><div class="language-switch" aria-label="Язык / Тіл"><button type="button" data-set-language="ru" aria-pressed="{% if language != 'kz' %}true{% else %}false{% endif %}">RU</button><button type="button" data-set-language="kz" aria-pressed="{% if language == 'kz' %}true{% else %}false{% endif %}">KZ</button></div></header>{% endblock %}
+{% block page_footer %}{% endblock %}

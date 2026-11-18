@@ -1,0 +1,23 @@
+{% extends 'base.html' %}{% load static %}
+{% block page %}kitchen{% endblock %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/kitchen.css' %}?v=planning-9">{% endblock %}
+{% block page_header %}
+<header class="kds-header">
+  <div class="kds-brand"><img src="{% static 'branding/tuysqan-logo.png' %}" alt="Tuysqan Coffee" width="2172" height="724"><span data-ru="КУХНЯ" data-kz="АСҮЙ">КУХНЯ</span></div>
+  <div class="kds-header-tools"><span id="kitchen-connection" class="kds-connection" role="status" data-ru="Подключение…" data-kz="Қосылуда…">Подключение…</span><div class="language-switch" aria-label="Язык / Тіл"><button type="button" data-set-language="ru" aria-pressed="{% if language != 'kz' %}true{% else %}false{% endif %}">RU</button><button type="button" data-set-language="kz" aria-pressed="{% if language == 'kz' %}true{% else %}false{% endif %}">KZ</button></div><form method="post" action="/staff/logout/">{% csrf_token %}<button class="kds-logout" data-ru="Выйти" data-kz="Шығу">Выйти</button></form></div>
+</header>
+{% endblock %}
+{% block page_footer %}{% endblock %}
+{% block content %}
+<section class="kds-workspace" aria-labelledby="kitchen-title">
+  <div class="kds-title-row"><div><p class="kds-eyebrow">TUYSQAN · KITCHEN DISPLAY</p><h1 id="kitchen-title" data-ru="Заказы на кухне" data-kz="Асүй тапсырыстары">Заказы на кухне</h1><p class="kds-subtitle" data-ru="Блюда, которые нужно приготовить и передать на подачу." data-kz="Дайындап, ұсынуға беру қажет тағамдар.">Блюда, которые нужно приготовить и передать на подачу.</p></div><div class="kds-sync"><span id="kitchen-updated"></span><button type="button" id="kitchen-refresh" class="kds-icon-button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6.2 6.2a8.2 8.2 0 0 1 13.3 3M4.5 14.8a8.2 8.2 0 0 0 13.3 3"/></svg><span data-ru="Обновить" data-kz="Жаңарту">Обновить</span></button></div></div>
+  <div class="kds-controls"><div class="kds-filters" role="group" aria-label="Статус блюд / Тағам күйі"><button type="button" data-kitchen-filter="all" aria-pressed="true"><span data-ru="Все заказы" data-kz="Барлық тапсырыс">Все заказы</span><strong id="kitchen-count-all">0</strong></button><button type="button" data-kitchen-filter="waiting" aria-pressed="false"><span><i class="kds-dot waiting" aria-hidden="true"></i><span data-ru="Ожидают" data-kz="Күтуде">Ожидают</span></span><strong id="kitchen-count-waiting">0</strong></button><button type="button" data-kitchen-filter="preparing" aria-pressed="false"><span><i class="kds-dot preparing" aria-hidden="true"></i><span data-ru="Готовятся" data-kz="Дайындалуда">Готовятся</span></span><strong id="kitchen-count-preparing">0</strong></button><button type="button" data-kitchen-filter="ready" aria-pressed="false"><span><i class="kds-dot ready" aria-hidden="true"></i><span data-ru="Готовы" data-kz="Дайын">Готовы</span></span><strong id="kitchen-count-ready">0</strong></button></div>
+  <div class="kds-sound-panel"><div class="kds-sound-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></svg><div><strong data-ru="Голос новых заказов" data-kz="Жаңа тапсырыс дауысы">Голос новых заказов</strong><span id="kitchen-sound-status" role="status" data-ru="Включите звук на этом устройстве" data-kz="Осы құрылғыда дыбысты қосыңыз">Включите звук на этом устройстве</span></div></div><div class="kds-sound-actions"><button type="button" id="kitchen-sound-toggle" aria-pressed="false" class="kds-sound-toggle" data-ru="Включить звук" data-kz="Дыбысты қосу">Включить звук</button><button type="button" id="kitchen-sound-test" class="kds-sound-test" data-ru="Проверить" data-kz="Тексеру">Проверить</button></div></div></div>
+  <p id="kitchen-error" class="kds-error" role="alert"></p>
+  <div id="kitchen-announcement" class="kds-sr-only" role="status" aria-live="polite"></div>
+  <div id="kitchen-board" class="kds-board" data-actor="{{ request.user.pk }}" data-sound-url="{% static 'audio/kitchen-new-order.mp3' %}" aria-label="Заказы кухни / Асүй тапсырыстары"></div>
+  <noscript><p class="kds-error" data-ru="Для экрана кухни включите JavaScript в браузере." data-kz="Асүй экраны үшін браузерде JavaScript қосыңыз.">Для экрана кухни включите JavaScript в браузере.</p></noscript>
+</section>
+{{ orders|json_script:'kitchen-initial-orders' }}
+{% endblock %}
+{% block scripts %}<script src="{% static 'js/kitchen.js' %}?v=planning-9" defer></script>{% endblock %}

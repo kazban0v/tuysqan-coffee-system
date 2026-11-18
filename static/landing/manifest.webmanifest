@@ -1,0 +1,9 @@
+{
+  "name": "Tuysqan Coffee",
+  "short_name": "Tuysqan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4eee4",
+  "theme_color": "#f4eee4",
+  "lang": "kk"
+}

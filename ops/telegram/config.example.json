@@ -1,0 +1,12 @@
+{
+  "bot_token": "SET_NEW_BOT_TOKEN_HERE",
+  "chat_id": "SET_YOUR_PERSONAL_CHAT_ID",
+  "owner_user_id": "SET_THE_SAME_PERSONAL_USER_ID",
+  "health_token": "GENERATE_A_SEPARATE_RANDOM_SECRET",
+  "bot_api_token": "GENERATE_ANOTHER_RANDOM_SECRET",
+  "health_url": "http://127.0.0.1:8000/internal/monitor-health/",
+  "bot_status_url": "http://127.0.0.1:8000/internal/developer-bot-status/",
+  "state_dir": "/var/lib/tuysqan-monitor",
+  "interval_seconds": 15,
+  "failure_samples": 2
+}

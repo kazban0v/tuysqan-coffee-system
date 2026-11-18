@@ -1,0 +1,405 @@
+{
+  "source": "data/sources/drinks-page-a.png",
+  "categories": [
+    {
+      "slug": "drinks-coffee",
+      "name_ru": "Кофе",
+      "name_kz": "Кофе",
+      "items": [
+        {
+          "slug": "drink-espresso-02",
+          "name_ru": "Эспрессо",
+          "name_kz": "Эспрессо",
+          "volume": "0.2 л",
+          "price": 890,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "Цена под заголовком 0.2 л; реальный объём эспрессо нужно подтвердить, не заменять на 30 мл."
+          ]
+        },
+        {
+          "slug": "drink-flat-white-02",
+          "name_ru": "Флэт Уайт",
+          "name_kz": "Флэт Уайт",
+          "volume": "0.2 л",
+          "price": 1390,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "Цена под заголовком 0.2 л; объём нужно подтвердить."
+          ]
+        },
+        {
+          "slug": "drink-americano-03",
+          "name_ru": "Американо",
+          "name_kz": "Американо",
+          "volume": "0.3 л",
+          "price": 1090,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-americano-04",
+          "name_ru": "Американо",
+          "name_kz": "Американо",
+          "volume": "0.4 л",
+          "price": 1190,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-latte-03",
+          "name_ru": "Латте",
+          "name_kz": "Латте",
+          "volume": "0.3 л",
+          "price": 1490,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-latte-04",
+          "name_ru": "Латте",
+          "name_kz": "Латте",
+          "volume": "0.4 л",
+          "price": 1590,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-cappuccino-03",
+          "name_ru": "Капучино",
+          "name_kz": "Капучино",
+          "volume": "0.3 л",
+          "price": 1490,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-cappuccino-04",
+          "name_ru": "Капучино",
+          "name_kz": "Капучино",
+          "volume": "0.4 л",
+          "price": 1590,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-raf-03",
+          "name_ru": "Раф",
+          "name_kz": "Раф",
+          "volume": "0.3 л",
+          "price": 1790,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-raf-04",
+          "name_ru": "Раф",
+          "name_kz": "Раф",
+          "volume": "0.4 л",
+          "price": 1890,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-mochaccino-03",
+          "name_ru": "Мокачино",
+          "name_kz": "Мокачино",
+          "volume": "0.3 л",
+          "price": 1690,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "slug": "drinks-cold-coffee",
+      "name_ru": "Холодный кофе",
+      "name_kz": "Салқын кофе",
+      "items": [
+        {
+          "slug": "drink-ice-americano-04",
+          "name_ru": "Ice американо",
+          "name_kz": "Ice американо",
+          "volume": "0.4 л",
+          "price": 1390,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-ice-latte-04",
+          "name_ru": "Ice латте",
+          "name_kz": "Ice латте",
+          "volume": "0.4 л",
+          "price": 1790,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-ice-cappuccino-04",
+          "name_ru": "Ice капучино",
+          "name_kz": "Ice капучино",
+          "volume": "0.4 л",
+          "price": 1790,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-espresso-tonic-04",
+          "name_ru": "Эспрессо Тоник",
+          "name_kz": "Эспрессо Тоник",
+          "volume": "0.4 л",
+          "price": 1890,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-frappuccino-04",
+          "name_ru": "Фраппучино",
+          "name_kz": "Фраппучино",
+          "volume": "0.4 л",
+          "price": 2190,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-bumble-coffee-04",
+          "name_ru": "Bumble coffee",
+          "name_kz": "Bumble coffee",
+          "volume": "0.4 л",
+          "price": 1790,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "slug": "drinks-hot",
+      "name_ru": "Горячие напитки",
+      "name_kz": "Ыстық сусындар",
+      "items": [
+        {
+          "slug": "drink-cocoa-03",
+          "name_ru": "Какао",
+          "name_kz": "Какао",
+          "volume": "0.3 л",
+          "price": 1200,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-cocoa-04",
+          "name_ru": "Какао",
+          "name_kz": "Какао",
+          "volume": "0.4 л",
+          "price": 1290,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-hot-chocolate-03",
+          "name_ru": "Горячий шоколад",
+          "name_kz": "Ыстық шоколад",
+          "volume": "0.3 л",
+          "price": 1200,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-hot-chocolate-04",
+          "name_ru": "Горячий шоколад",
+          "name_kz": "Ыстық шоколад",
+          "volume": "0.4 л",
+          "price": 1290,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "slug": "drinks-signature",
+      "name_ru": "Авторские напитки",
+      "name_kz": "Авторлық сусындар",
+      "items": [
+        {
+          "slug": "drink-hawaiian-ice-tea-04",
+          "name_ru": "Гавайский ice tea",
+          "name_kz": "Гавай ice tea",
+          "volume": "0.4 л",
+          "price": 2090,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-tary-raf-04",
+          "name_ru": "Тары раф",
+          "name_kz": "Тары раф",
+          "volume": "0.4 л",
+          "price": 1690,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-talqan-latte-04",
+          "name_ru": "Талқан латте",
+          "name_kz": "Талқан латте",
+          "volume": "0.4 л",
+          "price": 1690,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-nut-mokko-04",
+          "name_ru": "Ореховый мокко",
+          "name_kz": "Жаңғақты мокко",
+          "volume": "0.4 л",
+          "price": 1640,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        },
+        {
+          "slug": "drink-mulled-wine-04",
+          "name_ru": "Глинтвейн",
+          "name_kz": "Глинтвейн",
+          "volume": "0.4 л",
+          "price": 2090,
+          "available": true,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": []
+        }
+      ]
+    },
+    {
+      "slug": "drinks-matcha",
+      "name_ru": "Матча",
+      "name_kz": "Матча",
+      "items": [
+        {
+          "slug": "drink-matcha-green",
+          "name_ru": "Матча зелёная",
+          "name_kz": "Жасыл матча",
+          "volume": "",
+          "price": null,
+          "available": false,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "В разделе 4 названия и 5 цен (1690, 1690, 1790, 1790, 2090). Соответствие цен и объёмов 0.3/0.4 л неоднозначно; заказ отключён до уточнения."
+          ]
+        },
+        {
+          "slug": "drink-matcha-blue",
+          "name_ru": "Матча голубая",
+          "name_kz": "Көк матча",
+          "volume": "",
+          "price": null,
+          "available": false,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "В разделе 4 названия и 5 цен (1690, 1690, 1790, 1790, 2090). Соответствие цен и объёмов 0.3/0.4 л неоднозначно; заказ отключён до уточнения."
+          ]
+        },
+        {
+          "slug": "drink-ice-matcha-green",
+          "name_ru": "Ice матча зелёная",
+          "name_kz": "Ice матча жасыл",
+          "volume": "",
+          "price": null,
+          "available": false,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "В разделе 4 названия и 5 цен (1690, 1690, 1790, 1790, 2090). Соответствие цен и объёмов 0.3/0.4 л неоднозначно; заказ отключён до уточнения."
+          ]
+        },
+        {
+          "slug": "drink-matcha-frappuccino",
+          "name_ru": "Фраппучино матча",
+          "name_kz": "Фраппучино матча",
+          "volume": "",
+          "price": null,
+          "available": false,
+          "kind": "drink",
+          "source": "data/sources/drinks-page-a.png",
+          "uncertainties": [
+            "В разделе 4 названия и 5 цен (1690, 1690, 1790, 1790, 2090). Соответствие цен и объёмов 0.3/0.4 л неоднозначно; заказ отключён до уточнения."
+          ]
+        }
+      ]
+    }
+  ],
+  "modifier_options": [
+    {
+      "name_ru": "Сироп",
+      "name_kz": "Сироп",
+      "price": 200
+    },
+    {
+      "name_ru": "Альтернативное молоко",
+      "name_kz": "Альтернатив сүт",
+      "price": 600
+    },
+    {
+      "name_ru": "Дополнительный шот",
+      "name_kz": "Қосымша шот",
+      "price": 0,
+      "printed_price": "тегін / бесплатно"
+    }
+  ],
+  "notes": [
+    "Дополнения не создаются как отдельные drink и не начисляются без поддержанного выбора модификаторов.",
+    "Там, где в источнике только международное название, оно сохранено без выдуманного перевода.",
+    "Не указаны объём, крепость и состав глинтвейна сверх колонки0.4л; не добавлять алкогольные утверждения."
+  ]
+}

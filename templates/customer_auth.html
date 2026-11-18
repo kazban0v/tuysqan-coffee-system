@@ -1,0 +1,42 @@
+{% extends 'base.html' %}{% load static %}
+{% block title %}Tuysqan Coffee · Заказ{% endblock %}
+{% block page %}client-phone{% endblock %}
+{% block head %}<link rel="stylesheet" href="{% static 'css/customer-auth.css' %}?v=1">{% endblock %}
+{% block page_header %}
+<header class="auth-header">
+  <a href="/" class="auth-logo" aria-label="Tuysqan Coffee"><img src="/static/branding/tuysqan-logo.png" alt="Tuysqan Coffee" width="2172" height="724"></a>
+  <div class="language-switch" aria-label="Язык / Тіл">
+    <button type="button" data-set-language="ru" aria-pressed="{% if language != 'kz' %}true{% else %}false{% endif %}">RU</button>
+    <button type="button" data-set-language="kz" aria-pressed="{% if language == 'kz' %}true{% else %}false{% endif %}">KZ</button>
+  </div>
+</header>
+{% endblock %}
+{% block content %}
+<div class="auth-layout">
+  <aside class="auth-brand-panel" aria-hidden="true">
+    <span class="auth-brand-kicker">TUYSQAN COFFEE</span>
+    <div class="auth-brand-center"><span>tuysqan</span><span>coffee</span></div>
+    <div class="auth-brand-bottom"><span>АҚТӨБЕ</span><span>●</span><span>КОФЕ · COFFEE</span></div>
+  </aside>
+  <section class="auth-content" aria-labelledby="auth-title">
+    <a class="auth-back" href="/table/{{ table_token|urlencode }}/"><span aria-hidden="true">←</span><span data-ru="Назад к меню" data-kz="Мәзірге оралу">Назад к меню</span></a>
+    <div class="auth-heading">
+      <p class="auth-kicker"><span aria-hidden="true"></span><span data-ru="ВАШ ЗАКАЗ" data-kz="ТАПСЫРЫСЫҢЫЗ">ВАШ ЗАКАЗ</span></p>
+      <h1 id="auth-title" data-ru="Продолжим заказ" data-kz="Телефон нөміріңіз">Продолжим заказ</h1>
+      <p class="auth-description" data-ru="Укажите номер, чтобы продолжить оформление заказа." data-kz="Тапсырысты рәсімдеуді жалғастыру үшін телефон нөміріңізді енгізіңіз.">Укажите номер, чтобы продолжить оформление заказа.</p>
+    </div>
+    <form method="post" id="client-phone-form" class="auth-form">
+      {% csrf_token %}
+      <label class="auth-field" for="client-phone"><span data-ru="Номер телефона" data-kz="Телефон нөмірі">Номер телефона</span>
+        <input id="client-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (7XX) XXX-XX-XX" maxlength="32" pattern="\+7 \(7[0-9]{2}\) [0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+      </label>
+      <label class="auth-field" id="client-name-field" for="client-name" hidden><span data-ru="Как вас зовут?" data-kz="Атыңыз кім?">Как вас зовут?</span><input id="client-name" name="name" autocomplete="given-name" maxlength="120"></label>
+      <label class="auth-consent"><input id="client-consent" name="consent" type="checkbox" required><span data-ru="Согласен на обработку номера и данных заказа." data-kz="Нөмірімді және тапсырыс деректерін өңдеуге келісемін.">Согласен на обработку номера и данных заказа.</span></label>
+      <p id="client-phone-error" class="form-error" role="alert"></p>
+      <button type="submit" class="auth-submit"><span data-ru="Продолжить к заказу" data-kz="Тапсырысқа өту">Продолжить к заказу</span><span aria-hidden="true">↗</span></button>
+    </form>
+    <div class="auth-signature" aria-hidden="true"><span></span><span>tuysqan coffee</span><span></span></div>
+  </section>
+</div>
+{% endblock %}
+{% block page_footer %}{% endblock %}

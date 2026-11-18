@@ -1,0 +1,37 @@
+.django-order-controls{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:12px 20px 18px;grid-column:1/-1}.django-order-controls button{height:44px;width:44px;border:1px solid #c9c3b5;border-radius:50%;background:#f5f0e7;color:#33392d;font:24px/1 sans-serif;cursor:pointer}.django-order-controls button:last-child{background:#a24f36;color:white;border-color:#a24f36}.django-order-controls button:disabled{opacity:.45;cursor:default}.django-order-controls output{font:600 15px sans-serif;min-width:20px;text-align:center}.django-order-controls button:focus-visible,.django-order-cart:focus-visible{outline:3px solid #47745b;outline-offset:4px}.django-order-unavailable{font-size:11px;color:#92553b}.django-order-cart{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(500px,calc(100% - 32px));padding:17px 22px;background:#30382c;color:#fffaf0;text-decoration:none;border-radius:12px;box-shadow:0 8px 30px #0003;font:600 14px sans-serif}.django-order-cart[hidden]{display:none}.django-order-cart strong{white-space:nowrap}.menu-list-item>.django-order-controls{padding:0;align-self:end}.item-dialog-copy>.django-order-controls{justify-content:flex-start;padding-left:0}@media(max-width:700px){.django-order-cart{bottom:calc(78px + env(safe-area-inset-bottom,0px))}.django-order-controls{padding:10px 15px 15px}.django-order-controls button{min-height:44px;min-width:44px}.menu-list-item>.django-order-controls{grid-column:1/-1;padding-top:12px}}
+
+.table-menu .visit-section,.table-menu .site-footer,.table-menu .mobile-dock,.table-menu .header-delivery,.table-menu #site-nav a:not([href="#menu"]){display:none}.table-menu .django-order-cart{bottom:calc(16px + env(safe-area-inset-bottom,0px))}.table-menu body{padding-bottom:100px}
+
+@media(max-width:760px){.compact-grid .menu-card>.django-order-controls{grid-column:2;justify-content:flex-end;gap:10px;padding:0 14px 14px}.compact-grid .django-order-controls button{width:40px;height:40px;min-width:40px;min-height:44px}.compact-grid .menu-card:not(:has(.dish-visual))>.django-order-controls{grid-column:1/-1}}
+.qr-my-orders{display:inline-flex;align-items:center;gap:7px;position:relative;min-height:44px;padding:9px 11px;border:1px solid #d7cbbb;border-radius:24px;text-decoration:none;color:#342c24;font-size:12px;white-space:nowrap}.qr-my-orders svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}.qr-my-orders i{position:absolute;width:7px;height:7px;right:6px;top:5px;border-radius:50%;background:#a44d32}.qr-my-orders:focus-visible{outline:3px solid #38726b;outline-offset:3px}@media(max-width:600px){.table-menu .header-actions{gap:8px;flex-wrap:wrap}.qr-my-orders{font-size:11px;padding:7px 9px}.table-menu .site-header{flex-wrap:wrap}}
+/* Keep QR navigation on a single header row; never wrap the toggle into content. */
+@media(max-width:760px){
+ .table-menu .site-header{display:grid;grid-template-columns:minmax(0,1fr) auto 36px;gap:8px;align-items:center;flex-wrap:nowrap;height:var(--header-h);min-height:var(--header-h)}
+ .table-menu .site-header>.brand{grid-column:1;grid-row:1;min-width:0;width:100%;max-width:160px}
+ .table-menu .site-header>.brand .tuysqan-logo{display:block;width:100%;max-width:100%;height:auto}
+ .table-menu .header-actions{grid-column:2;grid-row:1;display:flex;flex-wrap:nowrap;gap:6px;margin-left:0;min-width:0}
+ .table-menu .nav-toggle{grid-column:3;grid-row:1;order:initial;width:36px;height:44px;margin:0;padding:6px;justify-self:end;align-self:center}
+ .table-menu .qr-my-orders{padding:7px 9px;font-size:11px;min-height:42px;gap:5px}
+ .table-menu .qr-my-orders svg{width:17px;height:17px}
+ .table-menu .lang-switch{flex:none}.table-menu .lang-btn{min-width:32px;min-height:36px}
+}
+@media(max-width:380px){.table-menu .site-header{gap:6px}.table-menu .qr-my-orders [data-order-nav-label]{display:none}.table-menu .qr-my-orders{width:38px;min-height:42px;padding:8px;justify-content:center}.table-menu .header-actions{gap:5px}}
+@media(max-width:760px){
+ .table-menu .desktop-nav{inset:auto;top:calc(var(--header-h) + 8px);right:var(--gutter);left:auto;width:180px;max-width:calc(100vw - 32px);max-height:calc(100dvh - var(--header-h) - 24px);padding:6px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 25px #26231f18;font-size:14px;gap:0}
+ .table-menu .desktop-nav a{min-height:44px;padding:10px 12px;border:0;border-radius:7px;font-size:14px;line-height:1.4;align-items:center}
+ .table-menu .desktop-nav a:hover{background:#e9dfd1}
+}
+.table-menu #site-nav a.qr-nav-link{display:flex;align-items:center;gap:11px}.qr-nav-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+@media(max-width:760px){
+ .table-menu .desktop-nav{width:208px;padding:7px;right:var(--gutter);top:calc(var(--header-h) + 6px);border:1px solid #ddd3c3;border-radius:14px;background:#fffaf2;box-shadow:0 12px 28px #34271f14;outline:none;animation:qr-nav-enter .16s ease-out}
+ .table-menu #site-nav a.qr-nav-link{min-height:44px;padding:11px 12px;border:0;border-radius:8px;font-size:13px;font-weight:500;line-height:1.4;color:#514537;text-decoration:none}
+ .table-menu #site-nav a.qr-nav-link:hover{background:#f0e8dc;color:#34271f}
+ .table-menu #site-nav a.qr-nav-link:focus{outline:none}
+ .table-menu #site-nav a.qr-nav-link:focus-visible{outline:2px solid #8c7760;outline-offset:-2px;background:#f4ede2}
+ .table-menu .nav-toggle{border:1px solid transparent;border-radius:50%;transition:background .15s}
+ .table-menu .nav-toggle[aria-expanded=true]{background:#e9dfd0}
+ .table-menu .nav-toggle[aria-expanded=true] svg path{d:path('M6 6 18 18M6 18 18 6')}
+}
+@keyframes qr-nav-enter{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.table-menu .desktop-nav{animation:none}.table-menu .nav-toggle{transition:none}}
+.qr-nav-notification{width:7px;height:7px;flex:none;border-radius:50%;background:#a44d32;margin-left:auto}

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="kk"{% if ordering_enabled %} class="qr-view table-menu" data-table-menu="true"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>if(new URLSearchParams(location.search).get("view")==="menu")document.documentElement.classList.add("qr-view");</script>
+  <meta name="theme-color" content="#f4eee4">
+  <meta name="description" content="Tuysqan Coffee кофеханасының Ақтөбедегі сайты: ас мәзірі мен жеткізу сілтемесі. Тағамдар мен бағаларды нақтылау қажет.">
+  <link rel="canonical" href="https://tuysqan-coffee.pages.dev/">
+  <link rel="icon" href="/static/landing/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/static/landing/manifest.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tuysqan Coffee">
+  <meta property="og:url" content="https://tuysqan-coffee.pages.dev/">
+  <meta property="og:title" content="Tuysqan Coffee — Ақтөбедегі кофе мен таңғы ас">
+  <meta property="og:description" content="Tuysqan Coffee кофеханасының Ақтөбедегі сайты. Ас мәзірі мен бағаларды нақтылау қажет.">
+  <meta property="og:image" content="https://tuysqan-coffee.pages.dev/assets/tuysqan-cup-concept.jpg">
+  <meta property="og:image:alt" content="Tuysqan Coffee стақанының көрнекі визуализациясы">
+  <meta property="og:locale" content="kk_KZ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tuysqan Coffee — Ақтөбедегі кофе мен таңғы ас">
+  <meta name="twitter:description" content="Tuysqan Coffee кофеханасының Ақтөбедегі сайты. Ас мәзірі мен бағаларды нақтылау қажет.">
+  <meta name="twitter:image" content="https://tuysqan-coffee.pages.dev/assets/tuysqan-cup-concept.jpg">
+  <title>Tuysqan Coffee — Ақтөбедегі кофе мен таңғы ас</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/landing/styles.css?v=category-scroll-4">
+  <script src="/static/js/loading.js?v=1" defer></script><script src="/static/landing/menu-data.js" defer></script>
+  <script src="/static/landing/drinks-data.js?v=images-1" defer></script>
+  <script src="/static/landing/menu-upload-images.js" defer></script>
+  <!-- DJANGO ORDER INTEGRATION START -->
+{% if ordering_enabled %}{{ menu_data|json_script:"django-order-catalog" }}{% else %}{{ menu_presentation|json_script:"django-public-menu" }}{% endif %}
+<script src="/static/landing/django-menu-source.js?v=final-photos-44-1" defer></script>
+{% if ordering_enabled %}
+<link rel="stylesheet" href="/static/landing/order-bridge.css?v=qr-navigation-8">
+<script src="/static/landing/order-bridge.js?v=qr-navigation-3" defer></script>
+{% endif %}
+<!-- DJANGO ORDER INTEGRATION END -->
+<script src="/static/landing/app.js?v=printed-menu-1" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Tuysqan Coffee","telephone":"+77759258568","openingHours":["Mo-Fr 08:00-24:00","Sa-Su 09:00-01:00"],"sameAs":["https://www.instagram.com/tuysqan.aqtobe/","https://2gis.kz/aktobe/firm/70000001102004099"]}</script>
+<link rel="stylesheet" href="/static/css/loading.css?v=1"></head>
+<body>
+  <a class="skip-main-content" href="#main" data-i18n="skip">Перейти к содержимому</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Tuysqan Coffee — на главную">
+      <img class="tuysqan-logo" src="/static/branding/tuysqan-logo.png" alt="Tuysqan Coffee" width="2172" height="724">
+    </a>
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false"><span data-i18n="navToggle">Навигация</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></button><nav class="desktop-nav" id="site-nav" aria-label="Основная навигация">
+      {% if ordering_enabled %}<a class="qr-nav-link" href="#menu"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span data-i18n="navMenu">Меню</span></a><a class="qr-nav-link" href="/account/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 7h6m-6 4h6m-6 4h3"/></svg><span data-qr-nav-ru="Мои заказы" data-qr-nav-kz="Тапсырыстарым">Мои заказы</span>{% if guest_active_order_count %}<i class="qr-nav-notification" aria-label="Есть текущий заказ / Ағымдағы тапсырыс бар"></i>{% endif %}</a><a class="qr-nav-link" href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8M5 9v12h14V9M10 21v-7h4v7"/></svg><span data-i18n="backHome">На главную</span></a>{% else %}<a href="#menu" data-i18n="navMenu">Мәзір</a><a href="#about" data-i18n="navAbout">Кофехана</a><a href="#gallery" data-i18n="footerGallery">Атмосфера</a><a href="#visit" data-i18n="navVisit">Байланыс</a>{% endif %}
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Язык сайта">
+        <button type="button" class="lang-btn" data-lang="ru" aria-pressed="false">RU</button><button type="button" class="lang-btn is-active" data-lang="kk" aria-pressed="true">KZ</button>
+      </div>
+      <a class="header-delivery" href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer"><span data-i18n="delivery">Жеткізу</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    </div>
+  </header>
+
+  <main id="main">
+<div class="qr-intro"><p class="eyebrow">TUYSQAN COFFEE · QR{% if ordering_enabled %} · {{ table.name }}{% endif %}</p><p data-i18n="qrIntro">Выберите блюдо и закажите у официанта.</p>{% if not ordering_enabled %}<a href="/" data-i18n="backHome">На главную</a>{% endif %}</div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-pattern" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">АҚТӨБЕ · КОФЕ ЖӘНЕ ТАҢҒЫ АС</span></p>
+        <h1 id="hero-title"><span data-i18n="heroTitle1">Өзіміз отырып</span><em data-i18n="heroTitle2">шәй ішейік.</em></h1>
+        <p class="hero-description" data-i18n="heroDescription">Күнді асықпай бастауға, дәмді таңғы ас пен бір кесе кофеге арналған жайлы орын.</p>
+        <div class="hero-buttons"><a href="#menu" class="button button-dark"><span data-i18n="openMenu">Мәзірді ашу</span><span class="button-arrow arrow-icon arrow-down" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 7 17 17M8 17h9V8"/></svg></span></a><a href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer" class="text-link"><span data-i18n="orderDelivery">Яндекс арқылы тапсырыс беру</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+        <a class="qr-entry" href="#menu" data-i18n="qrEntry">Мәзірді қарау</a><div class="hero-footnote"><span class="ornament-dot"></span><span data-i18n="heroFootnote">Кофе · таңғы ас · жылы кездесу</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-frame"><img src="/static/landing/assets/optimized/tuysqan-cup-printed-v2.webp" alt="Визуализация фирменного стакана Tuysqan Coffee" class="hero-photo" width="1122" height="1402" fetchpriority="high" decoding="async"></div>
+        <div class="hero-note"><span class="note-number">01</span><div class="hero-note-copy"><span data-i18n="noteText">Бір кесе кофеден басталады</span><span class="photo-caption" data-i18n="photoCaption">ВИЗУАЛЬНАЯ КОНЦЕПЦИЯ</span></div></div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span><span data-i18n="scrollHint">ТӨМЕН ҚАРАЙ</span></div>
+    </section>
+
+    <section class="showcase-section page-section" id="showcase" aria-labelledby="showcase-title">
+      <div class="section-heading"><p class="section-kicker" data-i18n="showcaseKicker">МӘЗІРДЕН</p><div class="heading-row"><h2 id="showcase-title" data-i18n="showcaseTitle">Мәзірімізден.</h2><p data-i18n="showcaseIntro">Таңғы астан басталатын шағын таңдау.</p></div></div>
+      <div class="showcase-grid" id="showcase-grid"></div>
+      <a class="underlined-link" href="#menu" data-i18n="footerMenu">Барлық мәзір</a>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div class="section-kicker"><span>02</span><span class="kicker-rule"></span><span data-i18n="menuKicker">ТАҢДАП АЛЫҢЫЗ</span></div>
+        <div class="heading-row"><h2 id="menu-title" data-i18n="menuTitle">Мәзір<span>.</span></h2><p data-i18n="menuIntro">Күннің кез келген сәтіне арналған дәмдер.</p></div>
+      </div>
+      <div class="menu-tools"><div class="category-rail"><div class="category-list" id="category-list" role="group" aria-label="Меню санаттары"></div></div><label class="search-box"><svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="visually-hidden" data-i18n="searchLabel">Мәзірден іздеу</span><input id="menu-search" type="search" placeholder="Іздеу / Поиск" autocomplete="off"><button class="search-clear" id="search-clear" type="button" aria-label="Очистить поиск" hidden>×</button></label></div>
+      <div class="menu-note"><p data-i18n="menuNotice">Бағасын, құрамын және бар-жоғын Tuysqan Coffee қызметкерлерінен нақтылаңыз.</p></div>
+      <div class="menu-results-heading"><h3 id="menu-results-title" hidden></h3><p class="menu-count" id="menu-count" aria-live="polite"></p></div>
+      <div class="menu-grid" id="menu-grid" data-initial-loading aria-busy="true" aria-label="Меню / Мәзір">{% include "loading_menu.html" %}</div>
+
+      <div class="menu-cta"><div><span class="menu-cta-kicker" data-i18n="hungry">ТАМАКТАНУҒА ДАЙЫНСЫЗ БА?</span><h3 data-i18n="menuCtaTitle">Өзіңізге ұнайтынды таңдаңыз.</h3></div><a class="button button-light" href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer"><span data-i18n="deliveryCta">Жеткізуге тапсырыс беру</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+    </section>
+
+    <section class="intro-strip" id="about">
+      <div class="intro-top"><span data-i18n="introLabel">TUYSQAN — АҚТӨБЕ</span><span class="intro-ornament" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><path d="M16 3v26M3 16h26M6.8 6.8l18.4 18.4M25.2 6.8 6.8 25.2"/></svg></span></div>
+      <div class="intro-content"><h2 data-i18n="aboutTitle">Жайлы сәтке<br><em>орын бар.</em></h2><div><p data-i18n="introText">Таңғы асқа, достармен әңгімеге немесе жолай ішетін кофеге. Tuysqan Coffee-дегі атмосфераны сезініңіз.</p><a href="#visit" class="underlined-link"><span data-i18n="findUs">Бізді табу</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div></div>
+      <div class="intro-bottom"><span data-i18n="footerText">Өзіміз отырып шәй ішейік.</span><span>● ● ●</span></div>
+    </section>
+
+    <section class="story-section" aria-labelledby="story-title">
+      <div class="story-photo"><img width="1122" height="1402" src="/static/landing/assets/optimized/tuysqan-interior-concept.webp" alt="Концептуальная визуализация интерьера Tuysqan Coffee" loading="lazy" decoding="async"><span class="story-photo-label" data-i18n="storyPhotoLabel">КҮНДІҢ ЖАЙЛЫ ҮЗІЛІСІ</span></div>
+      <div class="story-copy"><div class="section-kicker light-kicker"><span>03</span><span class="kicker-rule"></span><span data-i18n="storyKicker">АТМОСФЕРА</span></div><h2 id="story-title" data-i18n="storyTitle">Кішкентай<br>дәстүрлер<span>.</span></h2><p data-i18n="storyText">Жақын адамдар, жай әңгіме және сүйікті сусын. Tuysqan — күннің арасында өзіңізге бөлген жылы сәт.</p><a class="story-link" href="https://www.instagram.com/tuysqan.aqtobe/" target="_blank" rel="noopener noreferrer"><span data-i18n="instagramLink">Instagram-да көру</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a><span class="story-big-number" aria-hidden="true">04</span></div>
+    </section>
+
+    <section class="gallery-section page-section" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-heading"><p class="section-kicker" data-i18n="galleryKicker">АТМОСФЕРА</p><div class="heading-row"><h2 id="gallery-title" data-i18n="galleryTitle">Біздің атмосфера.</h2><p data-i18n="galleryIntro">Ұсынылған материалдардан екі сәт.</p></div></div>
+      <div class="gallery-grid">
+        <button class="gallery-tile" type="button" data-gallery-src="/static/landing/assets/optimized/tuysqan-interior-photo.webp" data-gallery-key="galleryPhoto2"><img src="/static/landing/assets/optimized/tuysqan-interior-photo.webp" alt="Tuysqan кофеханасындағы үстел" width="1040" height="1386" loading="lazy" decoding="async"><span data-i18n="galleryPhoto2">Tuysqan үстелінде</span><span class="gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+        <button class="gallery-tile gallery-tile-small" type="button" data-gallery-src="/static/landing/assets/optimized/tuysqan-cup-photo.webp" data-gallery-key="galleryPhoto1"><img src="/static/landing/assets/optimized/tuysqan-cup-photo.webp" alt="Tuysqan жазуы мен ою-өрнегі бар стақан" width="1052" height="1376" loading="lazy" decoding="async"><span data-i18n="galleryPhoto1">Tuysqan стақаны</span><span class="gallery-expand" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
+      </div>
+    </section>
+    <section class="reviews-section page-section" id="reviews" aria-labelledby="reviews-title">
+      <div class="reviews-copy"><p class="section-kicker" data-i18n="reviewsKicker">ҚОНАҚТАР ПІКІРІ</p><h2 id="reviews-title" data-i18n="reviewsTitle">Әр қонақтың өз әсері.</h2><p data-i18n="reviewsText">Қонақтардың пікірін 2ГИС-тен оқыңыз.</p></div>
+      <a class="button button-dark" href="https://2gis.kz/aktobe/firm/70000001102004099/tab/reviews" target="_blank" rel="noopener noreferrer"><span data-i18n="reviewsAction">2ГИС-тегі пікірлер</span><span class="simple-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    </section>
+    <section class="delivery-section page-section" id="delivery" aria-labelledby="delivery-title"><div><p class="section-kicker" data-i18n="deliveryKicker">ЖЕТКІЗУ</p><h2 id="delivery-title" data-i18n="deliveryTitle">Tuysqan, өзіңіз қалаған жерде.</h2><p data-i18n="deliveryText">Мәзір мен жеткізудің қолжетімділігін Яндекс Еда сервисінен тексеріңіз.</p></div><a class="button button-light" href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer"><span data-i18n="deliveryButton">Яндекс Еданы ашу</span><span class="simple-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></section>
+
+    <section class="visit-section" id="visit">
+      <div class="visit-heading"><div class="section-kicker"><span>04</span><span class="kicker-rule"></span><span data-i18n="visitKicker">КЕЛІҢІЗ</span></div><h2 data-i18n="visitTitle">Кездескенше<span>.</span></h2><p data-i18n="visitText">Картадан жол табыңыз немесе жеткізуге өтіңіз.</p></div>
+      <div class="visit-cards">
+        <a class="visit-card map-card" href="https://2gis.kz/aktobe/firm/70000001102004099" target="_blank" rel="noopener noreferrer"><span class="visit-card-icon location-icon" aria-hidden="true"><svg viewBox="0 0 32 32" focusable="false"><circle cx="16" cy="14" r="9"/><path d="M16 2v6M16 20v10M4 14h6M22 14h6"/></svg></span><span class="visit-card-label" data-i18n="addressLabel">АДРЕС</span><strong data-i18n="address">Ақтөбе · Алтын Орда, 51в</strong><span class="visit-card-action"><span data-i18n="route">2ГИС-те бағыт құру</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span><span class="map-lines" aria-hidden="true"></span></a>
+        <a class="visit-card delivery-card" href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer"><span class="visit-card-icon"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="visit-card-label" data-i18n="deliveryLabel">ЖЕТКІЗУ</span><strong data-i18n="deliveryStrong">Яндекс Еда</strong><span class="visit-card-action"><span data-i18n="deliveryAction">Мәзір мен қолжетімділікті тексеру</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span></a>
+        <article class="visit-card hours-card">
+          <div class="hours-copy"><span class="visit-card-icon hours-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span><span class="visit-card-label" data-i18n="hoursLabel">ЖҰМЫС УАҚЫТЫ</span><strong data-i18n="hoursTitle">Сізді күн сайын күтеміз</strong><dl class="hours-list"><div><dt data-i18n="weekdays">Дс — Жм</dt><dd>08:00–24:00</dd></div><div><dt data-i18n="weekend">Сб — Жс</dt><dd>09:00–01:00</dd></div></dl></div>
+          <div class="hours-contact"><span class="visit-card-label">WhatsApp</span><a class="contact-phone" href="tel:+77759258568">+7 775 925-85-68</a><a class="visit-card-action whatsapp-action" href="https://api.whatsapp.com/send/?phone=77759258568&amp;text=Здравствуйте%21%0A%0AПишу+из+приложения+2ГИС.%0A%0A&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer"><span data-i18n="whatsappLabel">WHATSAPP-ҚА ЖАЗУ</span><span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
+        </article>
+      </div>
+
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-main"><a class="brand footer-brand" href="#top"><img class="tuysqan-logo" src="/static/branding/tuysqan-logo.png" alt="Tuysqan Coffee" width="2172" height="724"></a><p data-i18n="footerText">Өзіміз отырып шәй ішейік.</p><a href="https://www.instagram.com/tuysqan.aqtobe/" target="_blank" rel="noopener noreferrer">Instagram <span class="arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div><nav class="footer-nav" aria-label="Навигация внизу страницы"><a href="#menu" data-i18n="footerMenu">Мәзір</a><a href="#about" data-i18n="footerAbout">Tuysqan туралы</a><a href="#gallery" data-i18n="footerGallery">Атмосфера</a><a href="#reviews" data-i18n="footerReviews">Пікірлер</a><a href="#visit" data-i18n="footerVisit">Байланыс</a><a href="#menu" data-i18n="qrEntry">Мәзір</a></nav><div class="footer-bottom"><span data-i18n="footerCopyright">© Tuysqan Coffee</span><a href="#top" class="back-top" aria-label="Жоғарыға көтерілу">↑</a></div></footer>
+  <dialog id="content-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Закрыть">×</button><div id="dialog-content"></div></dialog>
+  <noscript><p class="noscript-note">Интерактивное меню требует JavaScript. / Интерактивті мәзір үшін JavaScript қажет. <a href="https://eda.yandex.ru/restaurant/tuysqan_aktobe">Яндекс Еда</a></p></noscript>
+  <nav class="mobile-dock" aria-label="Жылдам сілтемелер"><a href="#menu"><span class="dock-menu-icon" aria-hidden="true"></span><span data-i18n="dockMenu">Мәзір</span></a><a href="https://2gis.kz/aktobe/firm/70000001102004099" target="_blank" rel="noopener noreferrer"><span class="dock-map-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 6.5 8.5 4l7 2.5L21 4v13.5L15.5 20l-7-2.5L3 20zM8.5 4v13.5M15.5 6.5V20M12 9a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 4 0 2"/></svg></span><span data-i18n="dockRoute">Бағыт</span></a><a href="https://eda.yandex.ru/restaurant/tuysqan_aktobe?utm_campaign=mobile_web&amp;utm_medium=referral&amp;utm_source=rst_shared_link" target="_blank" rel="noopener noreferrer"><span class="dock-delivery-icon arrow-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span data-i18n="dockDelivery">Жеткізу</span></a></nav>
+</body>
+</html>

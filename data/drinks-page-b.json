@@ -1,0 +1,564 @@
+{
+  "categories": [
+    {
+      "id": "author-teas",
+      "name_ru": "Авторские чаи",
+      "name_kz": "Авторлық шәйлар",
+      "source": "data/sources/drinks-page-b.png",
+      "items": [
+        {
+          "slug": "tashkent-tea-1l",
+          "name_ru": "Ташкентский чай",
+          "name_kz": "Ташкент шәйі",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "tashkent-tea-03l",
+          "name_ru": "Ташкентский чай",
+          "name_kz": "Ташкент шәйі",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "moroccan-tea-1l",
+          "name_ru": "Марокканский чай",
+          "name_kz": "Мароккалық шәй",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "moroccan-tea-03l",
+          "name_ru": "Марокканский чай",
+          "name_kz": "Мароккалық шәй",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "sea-buckthorn-tea-1l",
+          "name_ru": "Облепиховый чай",
+          "name_kz": "Шырғанақ шай",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "sea-buckthorn-tea-03l",
+          "name_ru": "Облепиховый чай",
+          "name_kz": "Шырғанақ шай",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "berry-tea-1l",
+          "name_ru": "Ягодный",
+          "name_kz": "Жидекті",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "berry-tea-03l",
+          "name_ru": "Ягодный",
+          "name_kz": "Жидекті",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "kazakh-tea-1l",
+          "name_ru": "Чай по казахски",
+          "name_kz": "Қазақша шәй",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "kazakh-tea-03l",
+          "name_ru": "Чай по казахски",
+          "name_kz": "Қазақша шәй",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "ginger-tea-1l",
+          "name_ru": "Имбирный чай",
+          "name_kz": "Зімбір шәйі",
+          "price": 2290,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "ginger-tea-03l",
+          "name_ru": "Имбирный чай",
+          "name_kz": "Зімбір шәйі",
+          "price": 1490,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "lemonades",
+      "name_ru": "Лимонады",
+      "name_kz": "Лимонадтар",
+      "source": "data/sources/drinks-page-b.png",
+      "items": [
+        {
+          "slug": "mojito-1l",
+          "name_ru": "Мохито",
+          "name_kz": "Мохито",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "mojito-04l",
+          "name_ru": "Мохито",
+          "name_kz": "Мохито",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "pomegranate-orange-lemonade-1l",
+          "name_ru": "Гранат - апельсин",
+          "name_kz": "Анар - апельсин",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "pomegranate-orange-lemonade-04l",
+          "name_ru": "Гранат - апельсин",
+          "name_kz": "Анар - апельсин",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "mango-passionfruit-lemonade-1l",
+          "name_ru": "Манго - маракуйя",
+          "name_kz": "Манго - маракуйя",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "mango-passionfruit-lemonade-04l",
+          "name_ru": "Манго - маракуйя",
+          "name_kz": "Манго - маракуйя",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "berry-lemonade-1l",
+          "name_ru": "Ягодный",
+          "name_kz": "Жидекті",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "berry-lemonade-04l",
+          "name_ru": "Ягодный",
+          "name_kz": "Жидекті",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "mojito-kiwi-1l",
+          "name_ru": "Мохито-киви",
+          "name_kz": "Мохито-киви",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "mojito-kiwi-04l",
+          "name_ru": "Мохито-киви",
+          "name_kz": "Мохито-киви",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "pineapple-raspberry-lemonade-1l",
+          "name_ru": "Ананас-малина",
+          "name_kz": "Ананас-таңқурай",
+          "price": 2890,
+          "volume": "1 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        },
+        {
+          "slug": "pineapple-raspberry-lemonade-04l",
+          "name_ru": "Ананас-малина",
+          "name_kz": "Ананас-таңқурай",
+          "price": 1590,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "ice-furry",
+      "name_ru": "ICE Furry",
+      "name_kz": "ICE Furry",
+      "source": "data/sources/drinks-page-b.png",
+      "items": [
+        {
+          "slug": "almond-ice-furry-03l",
+          "name_ru": "Миндальный",
+          "name_kz": "Бадам дәмі",
+          "price": 2250,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        },
+        {
+          "slug": "pistachio-ice-furry-03l",
+          "name_ru": "Фисташковый",
+          "name_kz": "Пісте дәмі",
+          "price": 2250,
+          "volume": "0.3 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "milkshakes",
+      "name_ru": "Милкшейки",
+      "name_kz": "Милкшейктер",
+      "source": "data/sources/drinks-page-b.png",
+      "items": [
+        {
+          "slug": "classic-milkshake-04l",
+          "name_ru": "Классический",
+          "name_kz": "Классикалық",
+          "price": 1890,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "chocolate-milkshake-04l",
+          "name_ru": "Шоколадный",
+          "name_kz": "Шоколад",
+          "price": 1890,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "strawberry-milkshake-04l",
+          "name_ru": "Клубничный",
+          "name_kz": "Құлпынай",
+          "price": 1890,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "banana-milkshake-04l",
+          "name_ru": "Банановый",
+          "name_kz": "Банан",
+          "price": 1890,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "snickers-milkshake-04l",
+          "name_ru": "Сникерс",
+          "name_kz": "Сникерс",
+          "price": 2290,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "twix-cookie-milkshake-04l",
+          "name_ru": "Twix печенье",
+          "name_kz": "Twix печенье",
+          "price": 2290,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "kinder-bueno-milkshake-04l",
+          "name_ru": "Kinder bueno",
+          "name_kz": "Kinder bueno",
+          "price": 2290,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        },
+        {
+          "slug": "oreo-milkshake-04l",
+          "name_ru": "Орео",
+          "name_kz": "Орео",
+          "price": 2290,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [],
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "smoothies",
+      "name_ru": "Смузи",
+      "name_kz": "Смузи",
+      "source": "data/sources/drinks-page-b.png",
+      "items": [
+        {
+          "slug": "kiwi-lime-smoothie-04l",
+          "name_ru": "Киви-лайм ПП",
+          "name_kz": "Киви-лайм ПП",
+          "price": 1950,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        },
+        {
+          "slug": "raspberry-orange-smoothie-04l",
+          "name_ru": "Малина-апельсин",
+          "name_kz": "Таңқурай-апельсин",
+          "price": 1950,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        },
+        {
+          "slug": "banana-strawberry-smoothie-04l",
+          "name_ru": "Банан-клубника",
+          "name_kz": "Банан-құлпынай",
+          "price": 1950,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        },
+        {
+          "slug": "berry-fairytale-smoothie-04l",
+          "name_ru": "Ягодная сказка",
+          "name_kz": "Жидек ертегісі",
+          "price": 1950,
+          "volume": "0.4 л",
+          "kind": "drink",
+          "source": "data/sources/drinks-page-b.png",
+          "description_ru": "",
+          "description_kz": "",
+          "uncertainties": [
+            "Казахское название отсутствует на фото; черновой перевод для проверки носителем."
+          ],
+          "available": true
+        }
+      ]
+    }
+  ],
+  "source": "data/sources/drinks-page-b.png",
+  "notes": [
+    "38 вариантов напитков: 12 авторских чаёв, 12 лимонадов, 2 ICE Furry, 8 милкшейков, 4 смузи.",
+    "Названия RU и имеющиеся KZ переписаны по правой странице; орфография источника сохранена.",
+    "Мароккалық шәй / Шырғанақ шай и Чай по казахски воспроизведены как на фото; нуждаются в языковой редактуре, а не догадках о составе.",
+    "Манго - маракуйя, Мохито и брендовые названия на снимке даны общей строкой без отдельного KZ перевода.",
+    "Для Ананас-малина, двух ICE Furry и четырёх смузи KZ добавлен как явно черновой; описаний и составов нет и они не придуманы.",
+    "Объёмы/цены: чаи1л2290/0.3л1490, лимонады1л2890/0.4л1590; ICE Furry0.3л2250; молочные коктейли0.4л1890 или2290; все смузи0.4л1950.",
+    "На фото название категории именно ICE Furry; не нормализовано в McFlurry и не утверждается бренд/состав."
+  ]
+}

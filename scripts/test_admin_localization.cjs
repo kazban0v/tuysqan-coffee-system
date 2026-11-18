@@ -1,0 +1,12 @@
+'use strict';
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync('static/js/app.js','utf8');
+const start=source.indexOf('function localize()');
+const localize=source.slice(start,source.indexOf('\n',start));
+const hostile={dataset:{ru:'Тест <img src=x onerror=alert(1)>',kz:'Сынақ <b>мәтін</b>'},textContent:''};
+Object.defineProperty(hostile,'innerHTML',{set(){throw Error('Admin content must not be interpreted as HTML')}});
+const document={body:{dataset:{page:'admin-portal'}},documentElement:{},querySelectorAll:()=>[]};
+const context={document,lang:'ru',state:x=>x,$$:selector=>selector==='[data-ru]'?[hostile]:[]};
+vm.createContext(context);vm.runInContext(localize+';localize()',context);assert.equal(hostile.textContent,hostile.dataset.ru);
+context.lang='kz';vm.runInContext('localize()',context);assert.equal(hostile.textContent,hostile.dataset.kz);assert.equal(document.documentElement.lang,'kk');
+console.log('Admin RU/KZ localization renders stored names as literal text: PASS');
